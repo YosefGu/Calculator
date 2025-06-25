@@ -22,7 +22,10 @@ class Square(Shape):
         return self._side * 4
     
     def __str__(self):
-        return f"Squqre -> Side: {self._length}"
+        return f"Square -> Side: {self._side}"
     
-    def __add__(self, other):
+    def __add__(self, other: Shape):
         return Square(self._side + other._side)
+    
+    def __repr__(self):
+        return f"Square({self._side})"

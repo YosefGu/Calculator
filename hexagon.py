@@ -14,3 +14,6 @@ class Hexagon(Shape):
     
     def __str__(self):
         return f'Hexagon -> Side: {self._side}'
+
+    def __repr__(self):
+        return f"Hexagon({self._side})"

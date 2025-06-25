@@ -38,3 +38,6 @@ class Rectangle(Shape):
     def __add__(self, other):
         return Rectangle(self._length + other._length, self._width + other._width)
     
+    def __repr__(self):
+        return f"Rectangle({self._length}, {self._width})"
+    
