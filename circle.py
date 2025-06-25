@@ -25,3 +25,6 @@ class Circle(Shape):
     
     def __str__(self):
         return f"Circle -> Radius: {self._radius}"
+    
+    def __repr__(self):
+        return f"Circle({self._radius})"

@@ -9,3 +9,6 @@ class Right_trinagle(Triangle):
 
     def __str__(self):
         return f"Right Triangle -> Side 1: {self._side1}, Side 2: {self._side2}, Hypotenuse: {self._side3}"
+    
+    def __repr__(self):
+        return f'Right Triengle({self._side1}, {self._side2})'
