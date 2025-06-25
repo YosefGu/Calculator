@@ -34,3 +34,7 @@ class Rectangle(Shape):
     
     def __str__(self):
         return f"Rectangle -> Length: {self._length}, Width: {self._width}"
+    
+    def __add__(self, other):
+        return Rectangle(self._length + other._length, self._width + other._width)
+    

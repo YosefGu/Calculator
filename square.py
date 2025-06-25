@@ -7,7 +7,7 @@ class Square(Shape):
 
     @property
     def side(self):
-        return self._length
+        return self._side
     
     @side.setter
     def side(self, value):
@@ -23,3 +23,6 @@ class Square(Shape):
     
     def __str__(self):
         return f"Squqre -> Side: {self._length}"
+    
+    def __add__(self, other):
+        return Square(self._side + other._side)
