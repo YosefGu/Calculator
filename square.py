@@ -1,9 +1,9 @@
-from rectangle import Rectangle
+from shape import Shape
 
-class Square(Rectangle):
+class Square(Shape):
 
-    def __init__(self, _side):
-        super().__init__(_side, _side)
+    def __init__(self, side):
+        self._side = side
 
     @property
     def side(self):
@@ -13,9 +13,13 @@ class Square(Rectangle):
     def side(self, value):
         if value <= 0:
             raise ValueError("Side must be positive.")
-        self._length = value
-        self._width = value
+        self._side = value
 
+    def get_area(self):
+        return self._side * self._side
+    
+    def get_primeter(self):
+        return self._side * 4
     
     def __str__(self):
         return f"Squqre -> Side: {self._length}"
